@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://dtmt8v7i8tcpi"]
+
+[ext_resource type="Script" uid="uid://carwl37km80dh" path="res://jogo.gd" id="1_kxg5b"]
+[ext_resource type="FontFile" uid="uid://co2w3fqashuqa" path="res://Press_Start_2P/PressStart2P-Regular.ttf" id="2_evvns"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_evvns"]
+load_path = "res://.godot/imported/Gemini_Generated_Image_8hepmh8hepmh8hep.jpg-02d915404145500040c98faa763fa24e.ctex"
+
+[node name="jogo" type="Control" unique_id=479742714 node_paths=PackedStringArray("barra_consciencia", "barra_progresso", "barra_reputacao", "barra_formatura", "texto_principal", "texto_titulo_fase", "texto_estrelas", "botao_1", "botao_2", "botao_3", "botao_continuar")]
+layout_mode = 3
+anchor_left = -0.185
+anchor_top = -0.068
+offset_left = -484.88
+offset_top = -287.936
+offset_right = 1941.0
+offset_bottom = 1185.0
+script = ExtResource("1_kxg5b")
+barra_consciencia = NodePath("TextureRect/VBoxContainer/BarraConsciencia")
+barra_progresso = NodePath("TextureRect/VBoxContainer/BarraProgresso")
+barra_reputacao = NodePath("TextureRect/VBoxContainer/BarraReputacao")
+barra_formatura = NodePath("TextureRect/VBoxContainer/BarraFormatura")
+texto_principal = NodePath("TextureRect/TextoSituacao")
+texto_titulo_fase = NodePath("TextureRect/VBoxContainer/TextoTituloFase")
+texto_estrelas = NodePath("TextureRect/VBoxContainer/TextoEstrelas")
+botao_1 = NodePath("TextureRect/VBoxContainer2/BotaoA")
+botao_2 = NodePath("TextureRect/VBoxContainer2/BotaoB")
+botao_3 = NodePath("TextureRect/VBoxContainer2/BotaoC")
+botao_continuar = NodePath("TextureRect/BotaoContinuar")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1453761879]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39100003
+anchor_top = 0.35200003
+anchor_right = 0.568
+anchor_bottom = 0.42900002
+offset_left = -1128.8491
+offset_top = -634.9841
+offset_right = 1156.048
+offset_bottom = 784.207
+texture = SubResource("CompressedTexture2D_evvns")
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=1002650079]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 501.0
+offset_right = 1794.0
+offset_bottom = 972.0
+color = Color(0.00033773348, 0.041130662, 0.27612403, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=896281789]
+layout_mode = 0
+offset_left = 852.0
+offset_top = 437.0
+offset_right = 1301.0
+offset_bottom = 703.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.5, 0.5)
+
+[node name="Formatura" type="Label" parent="TextureRect/VBoxContainer" unique_id=427173147]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_evvns")
+text = "progresso da atividade"
+
+[node name="TextoTituloFase" type="Label" parent="TextureRect/VBoxContainer" unique_id=1337616711]
+layout_mode = 2
+
+[node name="BarraFormatura" type="ProgressBar" parent="TextureRect/VBoxContainer" unique_id=1844565276]
+layout_mode = 2
+tooltip_text = "Sua jornada até o diploma. Preencha esta barra para concluir o curso com sucesso."
+theme_override_colors/font_color = Color(0.9529412, 0.60784316, 0, 1)
+
+[node name="TextoEstrelas" type="Label" parent="TextureRect/VBoxContainer" unique_id=402527637]
+layout_mode = 2
+
+[node name="Conciencia" type="Label" parent="TextureRect/VBoxContainer" unique_id=546692699]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_evvns")
+text = "🧠 Consciência"
+
+[node name="BarraConsciencia" type="ProgressBar" parent="TextureRect/VBoxContainer" unique_id=1061882865]
+layout_mode = 2
+tooltip_text = "Mede sua ética e o quanto você realmente está aprendendo. Cair a zero significa perder sua integridade profissional."
+
+[node name="progresso" type="Label" parent="TextureRect/VBoxContainer" unique_id=430326233]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_evvns")
+text = "📚 Progresso "
+
+[node name="BarraProgresso" type="ProgressBar" parent="TextureRect/VBoxContainer" unique_id=1736702137]
+layout_mode = 2
+tooltip_text = "Mede suas notas e volume de entregas. Se zerar, você é reprovado por falta de desempenho."
+theme_override_colors/font_color = Color(0.03137255, 0.9490196, 0.03529412, 1)
+
+[node name="Reputacao" type="Label" parent="TextureRect/VBoxContainer" unique_id=1150998579]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_evvns")
+text = "🤝 Reputação"
+
+[node name="BarraReputacao" type="ProgressBar" parent="TextureRect/VBoxContainer" unique_id=1704725628]
+layout_mode = 2
+tooltip_text = "Mede a confiança que os professores e colegas têm em você. Se zerar, você será investigado por plágio."
+theme_override_colors/font_color = Color(0.23921569, 0.9490196, 0.9490196, 1)
+
+[node name="TextoSituacao" type="Label" parent="TextureRect" unique_id=1345630738]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41873547
+anchor_top = 0.32633337
+anchor_right = 0.6079564
+anchor_bottom = 0.47509897
+offset_left = 0.64001465
+offset_top = 0.7519531
+offset_right = 0.90393066
+offset_bottom = 0.24798584
+theme_override_fonts/font = ExtResource("2_evvns")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect" unique_id=1983238024]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 783.0
+offset_right = 1649.0
+offset_bottom = 896.0
+
+[node name="BotaoA" type="Button" parent="TextureRect/VBoxContainer2" unique_id=951930025]
+layout_mode = 2
+
+[node name="BotaoB" type="Button" parent="TextureRect/VBoxContainer2" unique_id=563027593]
+layout_mode = 2
+
+[node name="BotaoC" type="Button" parent="TextureRect/VBoxContainer2" unique_id=330976643]
+layout_mode = 2
+
+[node name="BotaoContinuar" type="Button" parent="TextureRect" unique_id=238680625]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47300002
+anchor_top = 0.23700002
+anchor_right = 0.528
+anchor_bottom = 0.321
+offset_left = -83.696045
+offset_top = 529.96796
+offset_right = 52.159058
+offset_bottom = 449.53992
+theme_override_fonts/font = ExtResource("2_evvns")
+text = "Avançar "
+
+[connection signal="pressed" from="TextureRect/VBoxContainer2/BotaoA" to="." method="_on_botao_1_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer2/BotaoB" to="." method="_on_botao_2_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer2/BotaoC" to="." method="_on_botao_3_pressed"]
